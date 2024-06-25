@@ -3,9 +3,18 @@ import os
 
 os.system('cls' if os.name=='nt' else 'clear')
 
-chars = 'abcdefghijklmnopqrstuvwxyz1234567890!@#$%*()_=+§¹²³£¢¬{[]}\|~^`´.,<>;:?°'
+characters = 'abcdefghijklmnopqrstuvwxyz1234567890!@#$%&*./\|+=-_'
+password = ''
 
-for c in range(16):
-    print(f'{chars[random.randint(0, len(chars)-1)]}', end='')
+for i in range(12):
+    char = characters[random.randint(0, len(characters)-1)]
+    if char.isalpha():
+        percent = random.randint(0, 100)
+        if percent <= 50:
+            password+=char
+        elif percent > 50:
+            password+=char.upper()
+    else:
+        password+=char
 
-print('\n')
+print(f'{password}\n')
