@@ -1,4 +1,8 @@
-﻿import random
+﻿"""
+Gerador de senhas aleatórias
+"""
+
+import random
 import os
 
 os.system('cls' if os.name=='nt' else 'clear')
