@@ -1,5 +1,5 @@
 ﻿"""
-Relógio feito com turle
+Relógio que mostra as horas atuais da máquina, feito com turtle
 """
 
 from turtle import *
