@@ -8,8 +8,6 @@ import time
 bgcolor('black')
 color('white')
 
-speed(8)
-
 x=-30
 hour = time.localtime(time.time()).tm_hour
 minute = time.localtime(time.time()).tm_min
@@ -18,6 +16,7 @@ left(60)
 
 # clock model
 for num in range(12):
+    speed(0)
     up()
     forward(200)
     down()
@@ -28,6 +27,8 @@ for num in range(12):
     right(x)
     x+=30
     down()
+
+speed(2)
 
 # reset turtle pos
 def reset():
