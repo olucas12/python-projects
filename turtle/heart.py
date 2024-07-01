@@ -1,4 +1,8 @@
-﻿from turtle import *
+"""
+coração feito com turtle
+"""
+
+from turtle import *
 
 bgcolor('black')
 color('red')
