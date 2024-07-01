@@ -5,12 +5,13 @@ Relógio que mostra as horas atuais da máquina, feito com turtle
 from turtle import *
 import time
 
-# reset turtle pos
+# reset position of turtle
 def resetPos():
     up()
     home()
     down()
 
+# draw the frame and intern shadow of clock
 def clockFrame():
     speed(0)
 
@@ -38,8 +39,7 @@ def clockFrame():
     circle(250)
     resetPos()
 
-    width(1)
-
+    width(2)
 
 x=-30
 hour = time.localtime(time.time()).tm_hour
@@ -51,12 +51,12 @@ left(60)
 bgcolor('black')
 color('black')
 
-# clock model
+# draw numbers of clock
 for num in range(12):
     up()
     forward(200)
     down()
-    write(num+1, font=['', 18])
+    write(num+1, align='center', font=['Arial', 18])
     backward(30)
     up()
     home()
@@ -66,7 +66,7 @@ for num in range(12):
 
 speed(2)
 
-width(3)
+width(4)
 
 resetPos()
 
