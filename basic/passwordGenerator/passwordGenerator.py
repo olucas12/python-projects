@@ -1,5 +1,5 @@
 ﻿"""
-Gerador de senhas aleatórias
+Random password generator
 """
 
 import random

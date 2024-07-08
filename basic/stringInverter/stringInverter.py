@@ -1,7 +1,3 @@
-"""
-Inverter strings
-"""
-
 import os
 
 os.system('cls')

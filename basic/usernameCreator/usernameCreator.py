@@ -1,5 +1,5 @@
 ﻿"""
-Código para criação de usuário padrão a partir do nome.
+Create usernames using user name
 """
 
 import os
