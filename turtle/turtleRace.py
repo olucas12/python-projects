@@ -2,35 +2,31 @@
 import random
 import os
 
-colors = ['red', 'blue', 'purple', 'orange', 'pink', 'white', 'brown', 'yellow', 'green', 'gray']
+Screen().setup(width=1100, height=600)
+
+turtles = []
+colors = ['red', 'blue', 'purple', 'brown', 'green', 'white', 'yellow', 'green']
 
 bgcolor('black')
 
 def createRunners():
-    t1 = Turtle()
-    t1 = t1.color(f'{colors[random.randint(0, 9)]}')
+    i=0
+    for turtle in range(8):
+        t = Turtle()
+        t.color(colors[i])
+        turtles.append(t)
+        i+=1
 
-    t2 = Turtle()
-    t2 = t2.color(f'{colors[random.randint(0, 9)]}')
-
-    t3 = Turtle()
-    t3 = t3.color(f'{colors[random.randint(0, 9)]}')
-
-    t4 = Turtle()
-    t4 = t4.color(f'{colors[random.randint(0, 9)]}')
-
-    t5 = Turtle()
-    t5 = t5.color(f'{colors[random.randint(0, 9)]}')
-
-    t6 = Turtle()
-    t6 = t6.color(f'{colors[random.randint(0, 9)]}')
-
-    t7 = Turtle()
-    t7 = t7.color(f'{colors[random.randint(0, 9)]}')
-
-    t8 = Turtle()
-    t8 = t8.color(f'{colors[random.randint(0, 9)]}')
-
+def initRunners():
+    createRunners()
+    y=0
+    for t in turtles:
+       t.speed(0)
+       t.up() 
+       t.goto(-450, -250+y)
+       y+=85
+       t.down()
+       t.shape('turtle')
 
 def makeTrack():
 
@@ -47,7 +43,7 @@ def makeTrack():
         x = track.xcor()+100
         track.down()
         track.forward(400)
-        track.color('gray')
+        track.color('#303030')
         track.write(f'  {y}', align='left', font=('arial', 18, 'bold'))
         track.color('white')
         y+=100
@@ -57,6 +53,6 @@ def makeTrack():
 
 makeTrack()
 
-createRunners()
+initRunners()
 
 mainloop()
