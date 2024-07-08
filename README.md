@@ -1,4 +1,3 @@
 # Python Projects
 
-Bem-vindo ao repositório `python-projects`!
-Este repositório contém uma coleção de projetos em Python que eu desenvolvi para aprender e explorar diferentes conceitos de programação, algoritmos e estruturas de dados.
+This repository contains a collection of Python codes that I have developed to learn and explore different programming concepts, algorithms, and data structures.
