@@ -7,7 +7,7 @@ from turtle import *
 bgcolor('black')
 color('red')
 
-speed(1)
+speed(0)
 
 fillcolor('red')
 begin_fill()

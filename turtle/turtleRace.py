@@ -1,13 +1,43 @@
 ﻿from turtle import *
 import random
 import os
+import time
 
 Screen().setup(width=1100, height=600)
+Screen().title('Turtle Race 1.0 - Python')
 
 turtles = []
 colors = ['red', 'blue', 'purple', 'brown', 'green', 'white', 'yellow', 'green']
+step = 4
 
 bgcolor('black')
+
+def Winner(t, color):
+    Screen().clear()
+    bgcolor(color)
+    bgcolor('black')
+    win = Turtle()
+    win.hideturtle()
+    win.speed(0)
+    win.up()
+    win.goto(0, 0)
+    win.down()
+    win.color(color)
+    win.write(f'  {t.color()[0].capitalize()} wins!', align='center', font=('inter', 18, 'bold'))
+
+
+def startRun():
+    winner = False
+    while winner != True:
+        for t in turtles:
+            t.forward(random.randint(step, step+4))
+            if (t.xcor() < 450):
+                pass
+            else:
+                winner = True
+                time.sleep(2)
+                Winner(t, t.color()[1])
+                break
 
 def createRunners():
     i=0
@@ -48,11 +78,11 @@ def makeTrack():
         track.color('white')
         y+=100
         track.forward(400)
-    
-    track.hideturtle()
 
 makeTrack()
 
 initRunners()
+
+startRun()
 
 mainloop()
